@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cachapa.expandablelayout.ExpandableLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:el_duration="500"
+    app:el_expanded="true"
+    android:id="@+id/discover_movies_filters_view"
+    tools:showIn="@layout/fragment_movies_discover"
+    android:layout_margin = "8dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TableRow android:minHeight="70dp">
+
+            <TextView
+                android:text="@string/discover_filters_release_date_from"
+                android:gravity="start|center_vertical"
+                android:layout_weight="1"
+                style="@style/BaseText"
+                />
+
+            <TextView
+                android:text="@string/discover_filters_tap_to_select_date"
+                android:gravity="center"
+                android:id="@+id/discover_movies_release_date_from_picker"
+                android:layout_weight="1"
+                style="@style/BaseText"/>
+
+            <Button
+                android:text="@string/discover_filters_clear_filter_button"
+                style="@style/BaseButton.ClearFilterButton"
+                android:id="@+id/discover_movies_release_date_from_clear"/>
+        </TableRow>
+
+        <TableRow android:minHeight="60dp">
+
+            <TextView
+                style="@style/BaseText"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:text="@string/discover_filters_release_date_to" />
+
+            <TextView
+                android:id="@+id/discover_movies_release_date_to_picker"
+                style="@style/BaseText"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/discover_filters_tap_to_select_date" />
+
+            <Button
+                android:id="@+id/discover_movies_release_date_to_clear"
+                style="@style/BaseButton.ClearFilterButton"
+                android:text="@string/discover_filters_clear_filter_button" />
+        </TableRow>
+        <TableRow android:minHeight="60dp">
+            <TextView
+                android:text="@string/discover_filters_vote_range"
+                android:gravity="start|center_vertical"
+                android:layout_weight="1"
+                style="@style/BaseText"/>
+            <TextView
+                android:text="@string/discover_filters_tap_to_select_vote_average"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/discover_movies_vote_average_picker"
+                style="@style/BaseText"/>
+            <Button
+                android:text="@string/discover_filters_clear_filter_button"
+                style="@style/BaseButton.ClearFilterButton"
+                android:id="@+id/discover_movies_vote_average_clear"/>
+        </TableRow>
+        <TableRow android:minHeight="60dp">
+            <TextView
+                android:text="@string/discover_filters_genres"
+                android:gravity="start|center_vertical"
+                android:layout_weight="1"
+                style="@style/BaseText"/>
+            <TextView
+                android:text="@string/discover_filters_tap_to_select_genres"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/discover_movies_genres_picker"
+                style="@style/BaseText"
+                />
+            <Button
+                android:text="@string/discover_filters_clear_filter_button"
+                style="@style/BaseButton.ClearFilterButton"
+                android:id="@+id/discover_movies_genres_clear"/>
+        </TableRow>
+    </TableLayout>
+</net.cachapa.expandablelayout.ExpandableLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_select_vote_range_header"
+        style="@style/BaseHeader"/>
+    <com.appyvet.rangebar.RangeBar
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        custom:tickStart="1"
+        custom:tickInterval="1"
+        custom:tickEnd="10"
+        custom:barWeight="2dp"
+        custom:tickHeight="2dp"
+        android:id="@+id/dialog_select_vote_range_bar"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_select_vote_range_values"
+        style="@style/BaseHeader.SubHeader"
+        android:id="@+id/dialog_select_vote_range_values"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_button"
+        android:id="@+id/dialog_select_vote_average_select_button"
+        style="@style/BaseButton"/>
+
+</LinearLayout>

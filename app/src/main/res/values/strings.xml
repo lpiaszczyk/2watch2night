@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">2Watch2Night</string>
+    <!-- app variables -->
+    <string name="base_api_url" translatable="false">https://api.themoviedb.org/3/</string>
+    <string name="api_key" translatable="false">0a1b4ff2aa4c431fd6c4b95dc7519ba7</string>
+    <string name="image_api_url" translatable="false">http://image.tmdb.org/t/p/w154</string>
+
+    <!-- common strings -->
+    <string name="movie_parcelable_name">parcelable_movie</string>
+    <string name="movie_details_offline_mode">movie_details_offline_mode</string>
+    <string name="nav_drawer_opened">Navigation drawer opened</string>
+    <string name="nav_drawer_closed">Navigation drawer closed</string>
+    <string name="select_button">Select</string>
+    <string name="search_button">Search</string>
+
+    <!-- translatable app strings -->
+
+    <!-- movies lists -->
+    <string name="tv_movies_criteria_heading">Showing movies:</string>
+
+    <!-- remote source error codes -->
+    <string name="remote_error_network">No internet connection available. Please enable data transfer or WiFi connection and try again.</string>
+    <string name="remote_error_server">Problem with connecting to the web server. Please try again later.</string>
+    <string name="remote_error_other">Problem with fetching data from the web server. Please try again later.</string>
+
+    <!-- local source error codes -->
+    <string name="local_error_get_movies">Could not get movies Watchlist from local database. Please try again.</string>
+    <string name="local_error_empty_movie_watchlist">There are no entries on your Watchlist. Press star icon
+    on Details View to add item to the list.</string>
+
+    <!-- error messages -->
+    <string name="movie_details_start_error">Problem occurred when showing Movie Details page, please try again later.</string>
+
+
+    <!-- movie details -->
+    <string name="movie_details_reviews_head">Movie Reviews</string>
+    <string name="movie_details_reviews_item_head">Review by:&#160;</string>
+    <string name="movie_details_videos_head">Movie trailers and videos</string>
+    <string name="movie_details_rating_format">Average users rating: %.2f</string>
+    <string name="movie_details_runtime_format">Runtime: %s minutes</string>
+    <string name="movie_details_release_date">Release date: %s</string>
+    <string name="movie_details_error_network">No internet connection available. Please enable data transfer or WiFi connection and tap this message to try again.</string>
+    <string name="movie_details_error_server">Problem with connecting to the web server. Please tap this message to try again.</string>
+    <string name="movie_details_empty_reviews_list">Unfortunately, no one has added review for this movie.</string>
+    <string name="movie_details_empty_videos_list">There are neither videos nor trailers associated with this movie.</string>
+
+    <!-- open in YouTube intents -->
+    <string name="youtube_intent_key">"vnd.youtube:"</string>
+    <string name="youtube_web_uri_base">"http://www.youtube.com/watch?v="</string>
+
+    <!-- main navigation drawer labels -->
+    <string name="nav_group_movies">Movies</string>
+    <string name="nav_group_about">About</string>
+    <string name="nav_item_movie_lists">Top Rated and Popular</string>
+    <string name="nav_item_movie_watchlist">Your Watchlist</string>
+    <string name="nav_item_movie_upcoming">Upcoming Premieres</string>
+    <string name="nav_item_movie_discover">Discover</string>
+    <string name="nav_item_movie_search">Search by Title</string>
+    <string name="nav_item_about_app">About</string>
+
+    <!-- movie details menu -->
+    <string name="menu_movie_details_watchlist_add">Add movie to your Watchlist</string>
+
+    <!-- movie watchlist -->
+    <string name="movie_watchlist_add_error">Error occurred, movie was not added to your Watchlist. Please try again.</string>
+    <string name="movie_watchlist_add_success">Movie added to your Watchlist.</string>
+    <string name="movie_watchlist_remove_error">Error occurred, movie was not removed from Watchlist. Please try again.</string>
+    <string name="movie_watchlist_remove_success">Movie removed from Watchlist.</string>
+
+    <!-- movie details cards titles -->
+    <string name="movie_details_card_details">Movie Card</string>
+    <string name="movie_details_card_videos">Movie Videos</string>
+    <string name="movie_details_card_reviews">Movie Reviews</string>
+
+    <!-- discover filters table labels -->
+    <string name="discover_filters_tap_to_select_date">Tap to select date</string>
+    <string name="discover_filters_tap_to_select_vote_average">Tap to select vote average range</string>
+
+    <!-- select votes range dialog -->
+    <string name="dialog_select_vote_range_values" formatted="false">Selected range: %d to %d</string>
+    <string name="dialog_select_vote_range_header">Select vote range:</string>
+    <string name="discover_filters_tap_to_select_genres">Tap to select genres</string>
+    <string name="discover_filters_release_date_from">Release date from:</string>
+    <string name="discover_filters_release_date_to">Release date to:</string>
+    <string name="discover_filters_vote_range">Users vote average:</string>
+    <string name="discover_filters_genres">Genres:</string>
+    <string name="discover_filters_clear_filter_button">Clear</string>
+    <string name="discover_filters_genres_selected">Selected %d genres</string>
+    <string name="discover_filters_show_filters">Show filters</string>
+    <string name="discover_filters_date_error">\'Release date to\' cannot be before \'release date from\'.</string>
+    <string name="discover_filters_vote_error">\'Vote average from\' cannot be bigger than \'vote average to\'.</string>
+
+    <!-- genres picker dialog -->
+    <string name="dialog_picker_genres_error">Cannot get genres list from server</string>
+    <string name="dialog_picker_genres_header">Select genres:</string>
+    <string name="search_filters_query">Search query:</string>
+
+    <!-- text in About dialog -->
+    <string name="about_app_text">This application is using resources that are property of
+        The Movie Database (TMDb http://www.themoviedb.org). \n\nIcons used in app come from https://material.io/icons
+        and are distributed under Apache Licence Version 2.0</string>
+
+    <!-- error messages for user -->
+    <string name="show_movie_details_error">Sorry, an error occurred when showing this movie details:(</string>
+
+    <string name="search_query_empty_error">Search query cannot be empty.</string>
+    <string name="error_empty_search_result">This search returns no results, please try other query.</string>
+
+
+</resources>

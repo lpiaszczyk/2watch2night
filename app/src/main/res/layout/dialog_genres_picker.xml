@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BaseHeader"
+        android:text="@string/dialog_picker_genres_header"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/dialog_genres_picker_genres_list"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BaseText.ErrorTextView"
+        android:id="@+id/dialog_genres_picker_error"
+        android:text="@string/dialog_picker_genres_error"
+        android:visibility="gone"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_button"
+        android:id="@+id/dialog_genres_select_button"
+        style="@style/BaseButton"/>
+</LinearLayout>

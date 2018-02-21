@@ -1,0 +1,92 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    
+    <declare-styleable name="AppTheme">
+        <attr name="GenreTextView" format = "reference"/>
+    </declare-styleable>
+
+    <!-- custom app styles -->
+    <style name="ListItemsContainer">
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="DetailsCard">
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="GenreTextView">
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/genre_text_view_border</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="ListItemText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+    </style>
+
+    <style name="ListItemText.HeaderSoft">
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+    <style name="ListItemText.HeaderBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
+    <style name="BaseHeader">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="BaseHeader.SubHeader">
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="BaseText">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="MovieListItemContainer">
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="MovieListItemText">
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BaseText.ErrorTextView">
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="BaseText.EmptyListMessage">
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="BaseButton">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorBackground</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+    <style name="BaseButton.ClearFilterButton">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">@color/colorBackground</item>
+    </style>
+</resources>
