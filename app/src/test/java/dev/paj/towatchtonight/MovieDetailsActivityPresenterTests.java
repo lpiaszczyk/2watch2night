@@ -1,5 +1,7 @@
 package dev.paj.towatchtonight;
 
+import com.annimon.stream.Optional;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -72,7 +74,7 @@ public class MovieDetailsActivityPresenterTests {
 
     @Test
     public void addMovieToWatchlist_WhenAddSucceed_ShouldNotifyViewWithResult() {
-        when(databaseAccess.addMovieToWatchList(any(), any())).thenReturn(Observable.just(true));
+        when(databaseAccess.addMovieToWatchList(any(), any())).thenReturn(Observable.just(Optional.of(true)));
         MovieDetailsActivityPresenter presenter = new MovieDetailsActivityPresenter(view, databaseAccess);
 
         presenter.addMovieToWatchlist(mock(Movie.class), mock(MovieDetails.class));
@@ -81,7 +83,7 @@ public class MovieDetailsActivityPresenterTests {
 
     @Test
     public void addMovieToWatchlist_WhenAddFailed_ShouldCallViewShowError() {
-        when(databaseAccess.addMovieToWatchList(any(), any())).thenReturn(Observable.just(false));
+        when(databaseAccess.addMovieToWatchList(any(), any())).thenReturn(Observable.just(Optional.of(false)));
         MovieDetailsActivityPresenter presenter = new MovieDetailsActivityPresenter(view, databaseAccess);
 
         presenter.addMovieToWatchlist(mock(Movie.class), mock(MovieDetails.class));
@@ -90,7 +92,7 @@ public class MovieDetailsActivityPresenterTests {
 
     @Test
     public void removeMovieFromWatchlist_WhenRemoveSucceed_ShouldNotifyViewWithResult() {
-        when(databaseAccess.removeMovieFromDatabase(any())).thenReturn(Observable.just(true));
+        when(databaseAccess.removeMovieFromDatabase(any())).thenReturn(Observable.just(Optional.of(true)));
         MovieDetailsActivityPresenter presenter = new MovieDetailsActivityPresenter(view, databaseAccess);
 
         presenter.removeMovieFromWatchlist(mock(Movie.class));
@@ -99,7 +101,7 @@ public class MovieDetailsActivityPresenterTests {
 
     @Test
     public void removeMovieFromWatchlist_WhenRemoveFailed_ShouldCallViewShowError() {
-        when(databaseAccess.removeMovieFromDatabase(any())).thenReturn(Observable.just(false));
+        when(databaseAccess.removeMovieFromDatabase(any())).thenReturn(Observable.just(Optional.of(false)));
         MovieDetailsActivityPresenter presenter = new MovieDetailsActivityPresenter(view, databaseAccess);
 
         presenter.removeMovieFromWatchlist(mock(Movie.class));

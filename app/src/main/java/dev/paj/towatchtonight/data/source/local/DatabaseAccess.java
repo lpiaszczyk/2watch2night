@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.annimon.stream.Optional;
+
 import java.util.ArrayList;
 
 import javax.inject.Inject;
@@ -25,12 +27,12 @@ public class DatabaseAccess {
         this.databaseHelper = databaseHelper;
     }
 
-    public Observable<Boolean> addMovieToWatchList(Movie movie, MovieDetails movieDetails){
+    public Observable<Optional<Boolean>> addMovieToWatchList(Movie movie, MovieDetails movieDetails){
         return Observable.fromCallable(() -> insertMovieToWatchlistDatabaseCallable(movie, movieDetails))
                 .subscribeOn(Schedulers.io());
     }
 
-    private boolean insertMovieToWatchlistDatabaseCallable(Movie movie, MovieDetails movieDetails) {
+    private Optional<Boolean> insertMovieToWatchlistDatabaseCallable(Movie movie, MovieDetails movieDetails) {
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         db.beginTransaction();
 
@@ -49,7 +51,7 @@ public class DatabaseAccess {
             movieId = db.insertOrThrow(WatchListContract.MovieEntry.TABLE_NAME, null, movieContentValues);
         } catch (SQLException e) {
             db.endTransaction();
-            return false;
+            return Optional.of(false);
         }
 
 
@@ -64,7 +66,7 @@ public class DatabaseAccess {
                 genreIds[i] = Long.parseLong(genres[i].getGenreId());
             } catch (SQLException f) {
                 db.endTransaction();
-                return false;
+                return Optional.of(false);
             }
             genreContentValues.clear();
         }
@@ -77,7 +79,7 @@ public class DatabaseAccess {
                 db.insertWithOnConflict(WatchListContract.MovieToGenreEntry.TABLE_NAME, null, movieToGenreContentValues, SQLiteDatabase.CONFLICT_IGNORE);
             } catch (SQLException f) {
                 db.endTransaction();
-                return false;
+                return Optional.of(false);
             }
 
             movieToGenreContentValues.clear();
@@ -86,15 +88,15 @@ public class DatabaseAccess {
         db.setTransactionSuccessful();
         db.endTransaction();
         db.close();
-        return true;
+        return Optional.of(true);
     }
 
-    public Observable<Boolean> removeMovieFromDatabase(Movie movie) {
+    public Observable<Optional<Boolean>> removeMovieFromDatabase(Movie movie) {
         return Observable.fromCallable(() -> deleteMovieFromWatchlistDatabase(movie))
                 .subscribeOn(Schedulers.io());
     }
 
-    private boolean deleteMovieFromWatchlistDatabase(Movie movie) {
+    private Optional<Boolean> deleteMovieFromWatchlistDatabase(Movie movie) {
         SQLiteDatabase db = databaseHelper.getWritableDatabase();
         Cursor cursor = db.query(WatchListContract.MovieEntry.TABLE_NAME,
                 new String[]{WatchListContract.MovieEntry._ID},
@@ -114,14 +116,14 @@ public class DatabaseAccess {
             db.delete(WatchListContract.MovieToGenreEntry.TABLE_NAME, WatchListContract.MovieToGenreEntry.COLUMN_MOVIE_ID + " = ? ",
                     new String[]{Long.toString(id)});
         } else {
-            return false;
+            return Optional.of(false);
         }
 
         db.setTransactionSuccessful();
         db.endTransaction();
         db.close();
 
-        return true;
+        return Optional.of(true);
     }
 
     public Observable<Boolean> checkIfMovieIsPresentInWatchlist(Movie movie) {
@@ -216,6 +218,7 @@ public class DatabaseAccess {
                     cursor.getString(cursor.getColumnIndex(WatchListContract.MovieEntry.COLUMN_VOTE_AVG)),
                     genres);
         }
+        cursor.close();
         return result;
     }
 
@@ -261,6 +264,7 @@ public class DatabaseAccess {
         if(cursor.moveToFirst()) {
             result = new Genre(Long.toString(genreId), cursor.getString(cursor.getColumnIndex(WatchListContract.GenreEntry.COLUMN_GENRE_DESC)));
         }
+        cursor.close();
         return result;
     }
 

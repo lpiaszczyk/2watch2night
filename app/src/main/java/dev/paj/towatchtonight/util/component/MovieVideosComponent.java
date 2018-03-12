@@ -10,7 +10,8 @@ import dev.paj.towatchtonight.util.module.RemoteMovieSourceModule;
 
 @MoviesViewScope
 @Component(dependencies = {NetComponent.class, AppContextComponent.class,},
-        modules = {MovieVideosModule.class, RemoteMovieSourceModule.class, MoviesClientModule.class, NetworkUtilsModule.class})
+        modules = {MovieVideosModule.class, RemoteMovieSourceModule.class, MoviesClientModule.class,
+                NetworkUtilsModule.class})
 public interface MovieVideosComponent {
     void inject(MovieDetailsVideosFragment fragment);
 }

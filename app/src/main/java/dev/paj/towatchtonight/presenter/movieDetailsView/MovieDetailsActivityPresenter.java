@@ -24,7 +24,7 @@ public class MovieDetailsActivityPresenter implements MovieDetailsActivityContra
         databaseAccess.addMovieToWatchList(movie, movieDetails)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe((result) -> {
-                    if(result) {
+                    if(result.isPresent() && result.get()) {
                         view.onMovieAddToWatchlistSuccess();
                     } else {
                         view.showAddToWatchlistError();
@@ -37,7 +37,7 @@ public class MovieDetailsActivityPresenter implements MovieDetailsActivityContra
         databaseAccess.removeMovieFromDatabase(movie)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe((result) -> {
-                    if(result) {
+                    if(result.isPresent() && result.get()) {
                         view.onMovieRemoveFromWatchlistSuccess();
                     } else {
                         view.showRemoveFromWatchlistError();

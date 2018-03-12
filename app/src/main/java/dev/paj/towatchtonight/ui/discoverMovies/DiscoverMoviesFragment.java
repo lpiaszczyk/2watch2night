@@ -174,7 +174,7 @@ public class DiscoverMoviesFragment extends Fragment implements DiscoverMoviesFr
         if(selectedGenres != null){
             genres = new ArrayList<>(selectedGenres);
             if(!genres.isEmpty()) {
-                genresPicker.setText(getString(R.string.discover_filters_genres_selected, genres.size()));
+                genresPicker.setText(getResources().getQuantityString(R.plurals.genres, genres.size(), genres.size()));
             } else {
                 genresPicker.setText(getResources().getText(R.string.discover_filters_tap_to_select_genres));
             }

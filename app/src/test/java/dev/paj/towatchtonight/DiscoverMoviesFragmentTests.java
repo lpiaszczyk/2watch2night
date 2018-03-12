@@ -121,7 +121,7 @@ public class DiscoverMoviesFragmentTests {
 
         fragment.onGenreSelected(genres);
         Assert.assertEquals(genresView.getText().toString(),
-                context.getString(R.string.discover_filters_genres_selected, genres.size()));
+                context.getResources().getQuantityString(R.plurals.genres, genres.size(), genres.size()));
     }
 
     @Test

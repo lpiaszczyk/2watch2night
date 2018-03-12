@@ -60,9 +60,6 @@ public class MovieDetailsReviewsFragment extends Fragment implements MovieDetail
                         .getAppContextComponent())
                 .build()
                 .inject(this);
-        /*if (savedInstanceState != null) {
-            movieToShow = savedInstanceState.getParcelable(getString(R.string.movie_parcelable_name));
-        }*/
         movieToShow = getArguments().getParcelable(getString(R.string.movie_parcelable_name));
         super.onCreate(savedInstanceState);
     }
@@ -101,7 +98,7 @@ public class MovieDetailsReviewsFragment extends Fragment implements MovieDetail
         adapter.setReviewsList(movieReviews);
         rvReviewsList.setAdapter(adapter);
         rvReviewsList.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        rvReviewsList.setNestedScrollingEnabled(false);
+        rvReviewsList.setNestedScrollingEnabled(true);
     }
 
     @Override

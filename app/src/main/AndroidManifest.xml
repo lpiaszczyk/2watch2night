@@ -8,24 +8,38 @@
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.mainMoviesList.MainActivity">
+        <activity android:name=".ui.mainMoviesList.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.movieDetailsView.MovieDetailsActivity" />
-        <activity android:name=".ui.moviesWatchlist.MovieWatchlistActivity"/>
-        <activity android:name=".ui.moviesWatchlist.MovieWatchlistDetailsActivity"/>
-        <activity android:name=".ui.upcomingMoviesList.UpcomingMoviesActivity"/>
-        <activity android:name=".ui.discoverMovies.DiscoverMoviesActivity" />
-        <activity android:name=".ui.searchMovies.SearchMoviesActivity" />
+        <activity android:name=".ui.movieDetailsView.MovieDetailsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.moviesWatchlist.MovieWatchlistActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.moviesWatchlist.MovieWatchlistDetailsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.upcomingMoviesList.UpcomingMoviesActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.discoverMovies.DiscoverMoviesActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.searchMovies.SearchMoviesActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

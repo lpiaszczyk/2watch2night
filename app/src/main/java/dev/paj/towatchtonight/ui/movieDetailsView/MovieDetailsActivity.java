@@ -55,8 +55,6 @@ public class MovieDetailsActivity extends MovieDetailsActivityBase {
                 .inject(this);
         super.presenter = this.presenter;
 
-        movieToShow = getIntent().getExtras().getParcelable(getString(R.string.movie_parcelable_name));
-
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(new MovieDetailsCardFragment());
         fragments.add(new MovieDetailsVideosFragment());

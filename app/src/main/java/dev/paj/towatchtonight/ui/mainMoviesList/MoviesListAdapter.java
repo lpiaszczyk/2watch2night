@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 import dev.paj.towatchtonight.R;
 import dev.paj.towatchtonight.data.model.movie.Movie;
 import dev.paj.towatchtonight.ui.endlessScroll.DetailsViewFromListInitiator;
-import dev.paj.towatchtonight.util.network.PosterUtils;
+import dev.paj.towatchtonight.util.network.ImageUtils;
 
 public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.MovieViewHolder> {
 
@@ -51,7 +51,7 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
         }
 
         holder.title.setText(title.toString());
-        PosterUtils.loadPosterIntoView(movie.getPosterPath(), holder.poster, fragment.getContext());
+        ImageUtils.loadPosterIntoView(movie.getPosterPath(), holder.poster, fragment.getContext());
     }
 
     @Override

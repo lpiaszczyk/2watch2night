@@ -2,12 +2,11 @@
     <string name="app_name">2Watch2Night</string>
     <!-- app variables -->
     <string name="base_api_url" translatable="false">https://api.themoviedb.org/3/</string>
-    <string name="api_key" translatable="false">0a1b4ff2aa4c431fd6c4b95dc7519ba7</string>
     <string name="image_api_url" translatable="false">http://image.tmdb.org/t/p/w154</string>
+    <string name="youtube_thumbnail_uri" translatable="false">http://img.youtube.com/vi/%s/sddefault.jpg</string>
 
     <!-- common strings -->
     <string name="movie_parcelable_name">parcelable_movie</string>
-    <string name="movie_details_offline_mode">movie_details_offline_mode</string>
     <string name="nav_drawer_opened">Navigation drawer opened</string>
     <string name="nav_drawer_closed">Navigation drawer closed</string>
     <string name="select_button">Select</string>
@@ -68,9 +67,9 @@
     <string name="movie_watchlist_remove_success">Movie removed from Watchlist.</string>
 
     <!-- movie details cards titles -->
-    <string name="movie_details_card_details">Movie Card</string>
-    <string name="movie_details_card_videos">Movie Videos</string>
-    <string name="movie_details_card_reviews">Movie Reviews</string>
+    <string name="movie_details_card_details">Information</string>
+    <string name="movie_details_card_videos">Related Videos</string>
+    <string name="movie_details_card_reviews">Reviews</string>
 
     <!-- discover filters table labels -->
     <string name="discover_filters_tap_to_select_date">Tap to select date</string>
@@ -85,7 +84,9 @@
     <string name="discover_filters_vote_range">Users vote average:</string>
     <string name="discover_filters_genres">Genres:</string>
     <string name="discover_filters_clear_filter_button">Clear</string>
-    <string name="discover_filters_genres_selected">Selected %d genres</string>
+    <string name="discover_filters_genres_plural_zero">Selected no genres</string>
+    <string name="discover_filters_genres_plural_one">Selected one genre</string>
+    <string name="discover_filters_genres_plural_other">Selected %d genres</string>
     <string name="discover_filters_show_filters">Show filters</string>
     <string name="discover_filters_date_error">\'Release date to\' cannot be before \'release date from\'.</string>
     <string name="discover_filters_vote_error">\'Vote average from\' cannot be bigger than \'vote average to\'.</string>
@@ -106,5 +107,6 @@
     <string name="search_query_empty_error">Search query cannot be empty.</string>
     <string name="error_empty_search_result">This search returns no results, please try other query.</string>
 
-
+    <string name="content_desc_tmdb_logo">The movie database logo.</string>
+    <string name="content_desc_movie_poster">Image showing movie\'s poster.</string>
 </resources>

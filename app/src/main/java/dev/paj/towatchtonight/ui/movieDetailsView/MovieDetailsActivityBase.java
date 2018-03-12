@@ -36,7 +36,9 @@ public abstract class MovieDetailsActivityBase extends AppCompatActivity impleme
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        movieToShow = getIntent().getExtras().getParcelable(getString(R.string.movie_parcelable_name));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(movieToShow.getTitle());
     }
 
     @Override

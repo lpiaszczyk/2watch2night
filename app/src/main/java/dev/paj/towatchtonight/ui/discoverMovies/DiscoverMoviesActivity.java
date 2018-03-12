@@ -6,7 +6,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -56,7 +55,6 @@ public class DiscoverMoviesActivity extends AppCompatActivity implements Discove
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                Log.d("drawer", "drawer opened");
             }
         };
         dlDrawerLayout.addDrawerListener(actionBarDrawerToggle);

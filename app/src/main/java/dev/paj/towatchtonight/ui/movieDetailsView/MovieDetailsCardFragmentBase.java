@@ -17,7 +17,7 @@ import dev.paj.towatchtonight.data.model.movie.Movie;
 import dev.paj.towatchtonight.data.model.movie.MovieDetails;
 import dev.paj.towatchtonight.data.source.remote.RemoteSourceError;
 import dev.paj.towatchtonight.dependencyContract.MovieDetailsContract;
-import dev.paj.towatchtonight.util.network.PosterUtils;
+import dev.paj.towatchtonight.util.network.ImageUtils;
 
 
 public abstract class MovieDetailsCardFragmentBase extends Fragment implements MovieDetailsContract.MovieCardView {
@@ -82,7 +82,7 @@ public abstract class MovieDetailsCardFragmentBase extends Fragment implements M
             populateMovieGenresList(movieDetails.getGenres());
             tvTitle.setText(movieToShow.getTitle());
             tvOriginalTitle.setText(movieToShow.getOriginalTitle());
-            PosterUtils.loadPosterIntoView(movieToShow.getPosterPath(), ivPoster, this.getContext());
+            ImageUtils.loadPosterIntoView(movieToShow.getPosterPath(), ivPoster, this.getContext());
             tvMovieDetailsRating.setText(getString(R.string.movie_details_rating_format, Float.valueOf(movieDetails.getVoteAverage())));
             tvMovieDetailsRuntime.setText(getString(R.string.movie_details_runtime_format, movieDetails.getRuntime()));
 

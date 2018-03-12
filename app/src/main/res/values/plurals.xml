@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="genres">
+        <item quantity="zero">@string/discover_filters_genres_plural_zero</item>
+        <item quantity="one">@string/discover_filters_genres_plural_one</item>
+        <item quantity="other">@string/discover_filters_genres_plural_other</item>
+    </plurals>
+</resources>

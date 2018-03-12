@@ -41,6 +41,8 @@ public class MovieDetailsVideosFragment extends Fragment implements MovieDetails
 
     @Inject
     MovieDetailsVideosPresenter presenter;
+    @Inject
+    MovieVideosListAdapter adapter;
 
     Movie movieToShow;
     boolean isAttached;
@@ -92,11 +94,10 @@ public class MovieDetailsVideosFragment extends Fragment implements MovieDetails
             movieVideosProgressBar.setVisibility(View.GONE);
             tvMovieVideosError.setVisibility(View.GONE);
             rvVideosList.setVisibility(View.VISIBLE);
-            MovieVideosListAdapter adapter = new MovieVideosListAdapter();
             adapter.setVideosList(movieVideos);
             rvVideosList.setAdapter(adapter);
             rvVideosList.setLayoutManager(new LinearLayoutManager(this.getContext()));
-            rvVideosList.setNestedScrollingEnabled(false);
+            rvVideosList.setNestedScrollingEnabled(true);
         }
 
     }

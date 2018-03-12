@@ -13,7 +13,8 @@
         android:id="@+id/movie_list_item_image"
         android:minWidth="185dp"
         android:minHeight="278dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/content_desc_movie_poster"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
